@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+		<meta charset="UTF-8">
+			<title>Cats or Dogs</title>
+	      		<link href="https://fonts.googleapis.com/css?family=Baloo+Chettan" rel="stylesheet">
+            	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+            	<link rel="stylesheet" type="text/css" href="css/stylesheet.css">
+
+</head>
+
+<body>
+
+<!--CONTENT-->
+
+	<header>
+
+    	<h1><i class="fa fa-paw" aria-hidden="true"></i> Cats or Dogs <i class="fa fa-paw" aria-hidden="true"></i></h1>
+
+	</header>
+
+<div id="container">
+
+	<p>Type in a number from 1-10</p>
+	
+		<input id="myInput" type="text">
+    
+    		<button onclick="animalFunction()">Click me!</button>
+
+					<!--Images-->
+
+						<img src="img/cat.jpg" id="img_cat" style="display:none" width="500px"/>
+	
+						<img src="img/dog.jpg" id="img_dog" style="display:none" width="500px"/>
+	
+						<img src="img/hamster.jpg" id="img_hamster" style="display:none" width="500px"/>
+	
+						<p id="answer"></p> 
+
+</div>
+
+
+<!--SCRIPT-->
+
+<!--jQUERY-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+
+	<script>
+
+		function animalFunction() {
+
+		var inputVariable = $('#myInput').val();
+
+	//***Conditionals Begin
+
+		// if number is greater than 0 and less or equal to 5, display cat image
+		
+		if ((inputVariable > 0) && (inputVariable <= 5)) {
+		document.getElementById("img_cat").style.display="block";
+		text = "meow";
+
+
+		// if number is greater than or equal to 6 and less than or equal to 10, display dog image
+		
+		} else if ((inputVariable >= 6) && (inputVariable <= 10)){
+		document.getElementById("img_dog").style.display="block";
+			text = "woof";
+	} 
+
+		// if other input, display hamster image
+		
+		else {
+			document.getElementById("img_hamster").style.display="block";
+			text = "om nom nom";
+	}
+	
+	//Conditionals END****
+
+	// displays text on page
+
+	document.getElementById("answer").innerHTML = text;
+
+};
+
+</script>
+
+<!--SCRIPT END-->
+
+</body>
+
+</html>

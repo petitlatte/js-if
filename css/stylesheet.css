@@ -1,0 +1,22 @@
+html {
+	text-align: center;
+	font-family:helvetica,sans-serif;
+}
+
+h1{
+	font-size:50px;
+	color:#333333;
+}
+
+#container {
+	border-radius: 10px;
+	background-color: GhostWhite;
+	height:auto;
+	padding:20px;
+}
+
+#container img{
+	display:block;
+	margin:auto;
+	border-radius: 5px;
+}
